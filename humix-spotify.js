@@ -5,8 +5,8 @@ var fs = require('fs');
 
 var config = {
     "moduleName" : "humix-spotify-module",
-    "commands" : [],
-    "events" : ["play-spotify", "pause-spotify", "stop-spotify"],
+    "commands" : ["play-spotify", "pause-spotify", "stop-spotify"],
+    "events" : [],
     "log" : {
         file : 'humix-spotify-module.log',
         fileLevel : 'info',
