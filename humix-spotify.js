@@ -4,7 +4,7 @@ var fs = require('fs');
 //var moduleConfig = require('./config.js');
 
 var config = {
-    "moduleName" : "humix-conversation-module",
+    "moduleName" : "humix-spotify-module",
     "commands" : [],
     "events" : ["play-spotify", "pause-spotify", "stop-spotify"],
     "log" : {
@@ -51,10 +51,10 @@ humix.on('connection', function(humixSensorModule){
     logger.info('Communication with humix-sense is now ready.');
 
     hsm.on("play-spotify", function (data) {
-        logger.debug('received tts data:'+data);
+        logger.debug('received tts data:' + data);
 
         // TODO : Check the type of data.
-        spotify.say(data);
+        spotify.playSong(data.songName, data.artistName);
     })
     /*
     conversation.on('msg', function(msg) {
