@@ -57,7 +57,20 @@ humix.on('connection', function(humixSensorModule){
         if (data.songName) {
             spotify.playSong(data.songName, data.artistName);
         } else {
-            spotify.playSong(data);
+            var re = /\{.*\}/;
+
+            if (data.match(re)) {
+                var obj = JSON.parse(data);
+
+                logger.info("obj.songName = " + obj.songName);
+                logger.info("obj.artistName = " + obj.artistName);
+
+                spotify.playSong(obj.songName, obj.artistName);
+
+            } else {
+                spotify.playSong(data);
+            }
+
         }
         
     })
