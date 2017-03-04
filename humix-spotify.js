@@ -51,18 +51,10 @@ humix.on('connection', function(humixSensorModule){
     logger.info('Communication with humix-sense is now ready.');
 
     hsm.on("play-spotify", function (data) {
-        logger.debug('received tts data:' + data);
+        logger.debug('received play-spotify data:' + data);
 
         // TODO : Check the type of data.
         spotify.playSong(data.songName, data.artistName);
     })
-    /*
-    conversation.on('msg', function(msg) {
-        logger.debug('about to publish:' + msg);
-
-        if(hsm){
-            hsm.event('stt', msg);
-        }
-    });*/
-
+    
 });
