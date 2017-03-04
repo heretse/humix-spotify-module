@@ -53,13 +53,13 @@ humix.on('connection', function(humixSensorModule){
     hsm.on("play-spotify", function (data) {
         logger.info('received play-spotify data: ' + data);
 
-        var jsonData;
-        if (data instanceof String) {
-            jsonData = JSON.parse(data)
-        }
-
         // TODO : Check the type of data.
-        spotify.playSong(jsonData.songName, jsonData.artistName);
+        if (data.songName) {
+            spotify.playSong(data.songName, data.artistName);
+        } else {
+            spotify.playSong(data);
+        }
+        
     })
     
 });
