@@ -51,7 +51,7 @@ humix.on('connection', function(humixSensorModule){
     logger.info('Communication with humix-sense is now ready.');
 
     hsm.on("play-spotify", function (data) {
-        logger.debug('received play-spotify data:' + data);
+        logger.info('received play-spotify data: ' + data);
 
         // TODO : Check the type of data.
         spotify.playSong(data.songName, data.artistName);
