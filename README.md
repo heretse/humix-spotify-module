@@ -61,3 +61,8 @@ Basically, this module has provided three commands for your Humix-Think to contr
   artistName: 'Ed Sheeran'
 }
 ```
+
+## Start module
+```
+npm start
+```
