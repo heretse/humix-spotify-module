@@ -66,14 +66,14 @@ Basically, this module has provided three commands for your Humix-Think to contr
 **If you just want to search only by artist name with the following JSON format: **
 ```
 {
-  songName: '*', // This field is required
+  songName: '*', // * means wildcard
   artistName: 'Ed Sheeran'
 }
 ```
 **If you just want to search only by song name with the following JSON format: **
 ```
 {
-  songName: 'Shape of you', // This field is required
+  songName: 'Shape of you', // Only left the song name field
 }
 ```
 
