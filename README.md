@@ -29,6 +29,8 @@ module.exports = {
     }
 };
 ```
+You can create your own Spotify Application on the following URL and obtain your client id and secret:
+https://developer.spotify.com/my-applications/#!/applications
 
 **Option2 : use global humix config file (*recommended*)**
 
@@ -59,6 +61,19 @@ Basically, this module has provided three commands for your Humix-Think to contr
 {
   songName: 'Shape of you', // This field is required
   artistName: 'Ed Sheeran'
+}
+```
+**If you just want to search only by artist name with the following JSON format: **
+```
+{
+  songName: '*', // This field is required
+  artistName: 'Ed Sheeran'
+}
+```
+**If you just want to search only by song name with the following JSON format: **
+```
+{
+  songName: 'Shape of you', // This field is required
 }
 ```
 
