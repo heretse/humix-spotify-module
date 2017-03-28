@@ -1,25 +1,25 @@
 {
-  "name": "humix-spotify-module",
-  "version": "0.1.0",
-  "description": "My Spotify project",
-  "main": "index.js",
-  "scripts": {
-    "start": "node humix-spotify.js"
-  },
-  "author": " Winston Hsieh <heretse@gmail.com>",
-  "keywords": [
-    "humix",
-    "spotify",
-    "raspberrypi"
-  ],
-  "license": "Apache-2.0",
-  "dependencies": {
-    "humix-logger": "^1.0.4",
-    "humix-sense": "^1.0.0",
-    "player": "^0.6.1",
-    "spotify-web-api-node": "^2.3.6"
-  },
-  "engines": {
-    "node": ">=4.2"
-  }
+    "name": "humix-spotify-module",
+    "version": "0.1.0",
+    "description": "My Spotify project",
+    "main": "index.js",
+    "scripts": {
+        "start": "node humix-spotify.js"
+    },
+    "author": " Winston Hsieh <heretse@gmail.com>",
+    "keywords": [
+        "humix",
+        "spotify",
+        "raspberrypi"
+    ],
+    "license": "Apache-2.0",
+    "dependencies": {
+        "humix-logger": "^1.0.4",
+        "humix-sense": "^1.0.0",
+        "player": "^0.6.1",
+        "spotify-web-api-node": "^2.3.6"
+    },
+    "engines": {
+        "node": ">=4.2"
+    }
 }

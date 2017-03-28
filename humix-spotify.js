@@ -4,14 +4,14 @@ var fs = require('fs');
 //var moduleConfig = require('./config.js');
 
 var config = {
-    "moduleName" : "humix-spotify-module",
-    "commands" : ["play-spotify", "pause-spotify", "resume-spotify", "stop-spotify"],
-    "events" : [],
-    "log" : {
-        file : 'humix-spotify-module.log',
-        fileLevel : 'info',
-        consoleLevel : 'debug'
-      }
+    "moduleName": "humix-spotify-module",
+    "commands": ["play-spotify", "pause-spotify", "resume-spotify", "stop-spotify"],
+    "events": [],
+    "log": {
+        file: 'humix-spotify-module.log',
+        fileLevel: 'info',
+        consoleLevel: 'debug'
+    }
 };
 
 var humix = new HumixSense(config);
@@ -21,7 +21,7 @@ var logger;
 
 console.log('========= starting ===========');
 
-humix.on('connection', function(humixSensorModule){
+humix.on('connection', function(humixSensorModule) {
     hsm = humixSensorModule;
 
     logger = hsm.getLogger();
@@ -29,14 +29,14 @@ humix.on('connection', function(humixSensorModule){
     logger.info('access config');
     var conf = hsm.getDefaultConfig();
 
-    if(!conf){
+    if (!conf) {
 
-        if(fs.existsSync('./config.js')){
+        if (fs.existsSync('./config.js')) {
 
             logger.info('using local config file')
             conf = require('./config.js');
 
-        }else{
+        } else {
 
             logger.error('fail to load conversation config. Exit');
             process.exit(1);
@@ -50,7 +50,7 @@ humix.on('connection', function(humixSensorModule){
 
     logger.info('Communication with humix-sense is now ready.');
 
-    hsm.on("play-spotify", function (data) {
+    hsm.on("play-spotify", function(data) {
         logger.info('received play-spotify data: ' + data);
 
         // TODO : Check the type of data.
@@ -72,7 +72,7 @@ humix.on('connection', function(humixSensorModule){
             }
 
         }
-        
+
     });
 
     hsm.on("pause-spotify", () => {
@@ -86,5 +86,5 @@ humix.on('connection', function(humixSensorModule){
     hsm.on("stop-spotify", () => {
         spotify.stopPlaying();
     });
-    
+
 });
