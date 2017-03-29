@@ -16,7 +16,7 @@ var myVar = setInterval(() => {
 
 }, 3000);
 
-// Add another song after 3 seconds
+// Add another song after 10 seconds
 var myVar2 = setInterval(() => {
 
     spotify.playSong("seasons in the sun", "westlife");
