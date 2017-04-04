@@ -5,7 +5,7 @@ var fs = require('fs');
 
 var config = {
     "moduleName": "humix-spotify-module",
-    "commands": ["play-spotify", "pause-spotify", "resume-spotify", "stop-spotify"],
+    "commands": ["play-spotify", "pause-spotify", "resume-spotify", "stop-spotify", "next-spotify"],
     "events": [],
     "log": {
         file: 'humix-spotify-module.log',
@@ -85,6 +85,10 @@ humix.on('connection', function(humixSensorModule) {
 
     hsm.on("stop-spotify", () => {
         spotify.stopPlaying();
+    });
+
+    hsm.on("next-spotify", () => {
+        spotify.nextSong();
     });
 
 });
