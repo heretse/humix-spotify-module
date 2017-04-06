@@ -11,15 +11,18 @@ spotify.init();
 // wait for setting access token
 var myVar = setInterval(() => {
 
-    spotify.playSong("shape of You", "Ed Sheeran");
+    //spotify.playSong("*", "Ed Sheeran");
+    spotify.searchPlaylistsAndPlay("sadness");
     clearInterval(myVar);
 
 }, 3000);
 
 // Add another song after 10 seconds
+
 var myVar2 = setInterval(() => {
 
-    spotify.playSong("seasons in the sun", "westlife");
+    //spotify.playSong("seasons in the sun", "westlife");
+    spotify.nextSong();
     clearInterval(myVar2);
 
 }, 10000);
