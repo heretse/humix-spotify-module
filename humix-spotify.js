@@ -56,6 +56,8 @@ humix.on('connection', function(humixSensorModule) {
         // TODO : Check the type of data.
         if (data.songName) {
             spotify.playSong(data.songName, data.artistName);
+        } else if (data.searchPlaylist) {
+            spotify.playPlaylistBySearch(data.searchPlaylist);
         } else {
             var re = /\{.*\}/;
 
@@ -66,7 +68,6 @@ humix.on('connection', function(humixSensorModule) {
                 logger.info("obj.artistName = " + obj.artistName);
 
                 spotify.playSong(obj.songName, obj.artistName);
-
             } else {
                 spotify.playSong(data);
             }
