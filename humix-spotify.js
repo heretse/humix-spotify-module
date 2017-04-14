@@ -53,27 +53,21 @@ humix.on('connection', function(humixSensorModule) {
     hsm.on("play-spotify", function(data) {
         logger.info('received play-spotify data: ' + data);
 
-        if (data.searchPlaylist) {
-            spotify.playPlaylistBySearch(data.searchPlaylist);
-            return;
-        }
+        // TODO : Check the type of data.
+        var re = /\{.*\}/;
+        if (data.match(re)) {
+            var obj = JSON.parse(data);
 
-        if (data.songName) {
-            spotify.playSong(data.songName, data.artistName);
-        } else {
-            var re = /\{.*\}/;
-
-            if (data.match(re)) {
-                var obj = JSON.parse(data);
-
+            if (obj.songName || obj.artistName) {
                 logger.info("obj.songName = " + obj.songName);
                 logger.info("obj.artistName = " + obj.artistName);
-
                 spotify.playSong(obj.songName, obj.artistName);
-            } else {
-                spotify.playSong(data);
+            } else if (obj.searchPlaylist) {
+                spotify.playPlaylistBySearch(obj.searchPlaylist);
             }
 
+        } else {
+            spotify.playSong(data);
         }
 
     });
