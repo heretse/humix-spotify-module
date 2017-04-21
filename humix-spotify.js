@@ -64,7 +64,7 @@ humix.on('connection', function(humixSensorModule) {
                 spotify.playSong(obj.songName, obj.artistName);
                 return;
             } else if (obj.ownerId && obj.playlistId) {
-                spotify.playPlaylist(obj.ownerId, obj.playlistId);
+                spotify.playByPlaylist(obj.ownerId, obj.playlistId);
                 return;
             } else if (obj.searchPlaylist) {
                 spotify.playPlaylistBySearch(obj.searchPlaylist);
