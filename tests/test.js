@@ -9,20 +9,20 @@ var spotify = new SpotifyPlayer({
 spotify.init();
 
 // wait for setting access token
-var myVar = setInterval(() => {
+var myVar = setTimeout(() => {
 
     //spotify.playSong("*", "Ed Sheeran");
-    spotify.playPlaylistBySearch("sadness");
-    clearInterval(myVar);
+    //spotify.playPlaylistBySearch("生氣");
+    spotify.playPlaylist('playlistmesg', '5C8KgLqJyJrxQ6BrfHEDSw');
 
 }, 3000);
 
 // Add another song after 10 seconds
 
-var myVar2 = setInterval(() => {
+var myVar2 = setTimeout(() => {
 
     //spotify.playSong("seasons in the sun", "westlife");
     spotify.nextSong();
-    clearInterval(myVar2);
+    //clearInterval(myVar2);
 
 }, 10000);

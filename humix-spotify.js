@@ -62,14 +62,18 @@ humix.on('connection', function(humixSensorModule) {
                 logger.info("obj.songName = " + obj.songName);
                 logger.info("obj.artistName = " + obj.artistName);
                 spotify.playSong(obj.songName, obj.artistName);
+                return;
+            } else if (obj.ownerId && obj.playlistId) {
+                spotify.playPlaylist(obj.ownerId, obj.playlistId);
+                return;
             } else if (obj.searchPlaylist) {
                 spotify.playPlaylistBySearch(obj.searchPlaylist);
+                return;
             }
 
         } else {
             spotify.playSong(data);
         }
-
     });
 
     hsm.on("pause-spotify", () => {
