@@ -55,6 +55,7 @@ Basically, this module has provided three commands for your Humix-Think to contr
 1. play-spotify: Play a preview music with the specific song name and artist name 
 2. pause-spotify: Pause the player
 3. stop-spotify: Stop the play and reset its queue
+4. next-spotify: Play the next song of its queue
 
 **The play-spotify needs a input payload with the following JSON format: **
 ```
@@ -74,6 +75,21 @@ Basically, this module has provided three commands for your Humix-Think to contr
 ```
 {
   songName: 'Shape of you', // Only left the song name field
+}
+```
+
+**If you just want to play a specific playlist with the following JSON format: **
+```
+{
+  ownerId: 'playlistmesg', // the owner id of the playlist
+  playlistId: '5C8KgLqJyJrxQ6BrfHEDSw' // the id of the playlist
+}
+```
+
+**If you just want to search some playlists with the following JSON format: **
+```
+{
+  searchPlaylist: 'Happy%20Birthday', // Search keyword
 }
 ```
 
