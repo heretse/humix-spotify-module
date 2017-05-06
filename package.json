@@ -1,7 +1,7 @@
 {
     "name": "humix-spotify-module",
-    "version": "0.1.0",
-    "description": "My Spotify project",
+    "version": "0.2.0",
+    "description": "This module is essentially a wrapper for the spotify-web-api-node module and it can make your Humix-Think easier to play music review from Spotify.",
     "main": "index.js",
     "scripts": {
         "start": "node humix-spotify.js"

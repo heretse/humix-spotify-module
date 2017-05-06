@@ -1,6 +1,6 @@
 ## Overview
 
-This humix module is essentially a wrapper for the spotify-web-api-node module and it can make your Humix-Think easier to play review music on Spotify.
+This module is essentially a wrapper for the spotify-web-api-node module and it can make your Humix-Think easier to play music review from Spotify.
 
 ##
 
