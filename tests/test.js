@@ -13,7 +13,8 @@ var myVar = setTimeout(() => {
 
     //spotify.playSong("*", "Ed Sheeran");
     //spotify.playPlaylistBySearch("生氣");
-    spotify.playByPlaylist('playlistmesg', '5C8KgLqJyJrxQ6BrfHEDSw');
+    //spotify.playByPlaylist('playlistmesg', '5C8KgLqJyJrxQ6BrfHEDSw');
+    spotify.playTopTracksForArtist('16s0YTFcyjP4kgFwt7ktrY');
 
 }, 3000);
 
