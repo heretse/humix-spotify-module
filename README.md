@@ -93,6 +93,13 @@ Basically, this module has provided three commands for your Humix-Think to contr
 }
 ```
 
+**If you just want to play a artist top tracks with the following JSON format: **
+```
+{
+  artistId: '16s0YTFcyjP4kgFwt7ktrY', // the artist id
+}
+```
+
 ## Start module
 ```
 npm start
