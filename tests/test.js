@@ -4,6 +4,7 @@ var spotify = new SpotifyPlayer({
     spotify: {
         clientId: '',
         clientSecret: ''
+        redirectUri: ''
     }
 });
 spotify.init();
